@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100vmin;
+    height: 100vmin;
+    background-color: #42a7a1;
+    border-radius: 3px;
+}
+
+.chart {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 60%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.3);
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.chart .head {
+    color: white;
+    background-color: #f1ba64;
+    width: 100%;
+    height: 27.27%;
+}
+
+.chart .head .content {
+    margin: 6%;
+}
+
+.chart .head .content .big {
+    font-weight: 600;
+    font-size: 3vmin;
+    text-transform: uppercase;
+}
+
+.chart .head .content .small {
+    font-size: 2.5vmin;
+    font-weight: 400;
+}
+
+.chart .head .left {
+    float: left;
+}
+
+.chart .head .right {
+    float: right;
+    text-align: right;
+}
+
+.chart .parameter {
+    width: 90%;
+    margin: 4vmin auto 5vmin auto;
+    font-size: 2.5vmin;
+    font-weight: 400;
+    color: #606060;
+    text-align: right;
+}
+
+.chart .parameter span::before {
+    display: inline-block;
+    content: "";
+    width: 2.25vmin;
+    height: 0.75vmin;
+    margin: 0 2vmin 0.5vmin 0 ;
+    border-radius: 3px;
+}
+
+.chart .parameter .red::before {
+    background: #FA7373; 
+}
+
+.chart .parameter .red {
+    padding-right: 2vmin;
+}
+
+.chart .parameter .blue::before {
+    background: #7BA2FF;
+}
+
+.chart .statistics svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.chart .statistics .data polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.chart .statistics .data.red polyline {
+    stroke: #FA7373;
+}
+
+.chart .statistics .data.blue polyline {
+    stroke: #7BA2FF;
+}
+
+.chart .statistics {
+    position: relative;
+    width: 90%;
+    height: 36.81%;
+    margin: 0 auto;
+}
+
+.chart .statistics .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1%;
+    background-color: #F2F2F2;
+}
+
+.chart .statistics .line:nth-child(2) {
+    top: 50%;
+}
+
+.chart .statistics .line:nth-child(3) {
+    top: 100%;
+}
+
+.chart .statistics .data .points .point {
+    position: absolute;
+    width: 1.5vmin;
+    height: 1.5vmin;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.chart .statistics .data .points .point.red,
+.chart .statistics .data .points .point.red .tooltip {
+    background: #FA7373;
+}
+
+.chart .statistics .data .points .point.blue,
+.chart .statistics .data .points .point.blue .tooltip {
+    background: #7BA2FF;
+}
+
+.chart .statistics .data .points .point .tooltip {
+    position: absolute;
+    bottom: 3vmin;
+    left: 50%;
+
+    transform: translate(-50%, 10px);
+    opacity: 0;
+    border-radius: 3px;
+    font-size: 2.0vmin;
+    font-weight: 600;
+    color: white;
+    visibility: hidden;
+    padding: 0.5vmin;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.chart .statistics .data .points .point:hover .tooltip{
+    visibility: visible;
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.chart .statistics .data .points .point.pr1 {
+    top: 10.4vmin;
+    left: 1.8vmin;
+}
+
+.chart .statistics .data .points .point.pr2 {
+    top: 2.5vmin;
+    left: 12vmin;
+}
+
+.chart .statistics .data .points .point.pr3 {
+    top: 4.8vmin; 
+    left: 22vmin;
+}
+
+.chart .statistics .data .points .point.pr4 {
+    top: 2.3vmin;
+    left: 32vmin;
+}
+
+.chart .statistics .data .points .point.pr5 {
+    top: 8.6vmin;
+    left: 42vmin;
+}
+
+.chart .statistics .data .points .point.pr6 {
+    top: 11.2vmin;
+    left: 52.4vmin;
+}
+
+.chart .statistics .data .points .point.pr7 {
+    top: 4.4vmin;
+    left: 62vmin;
+}
+
+.chart .statistics .data .points .point.pb1 {
+    top: 14.4vmin;
+    left: 1.8vmin;
+}
+
+.chart .statistics .data .points .point.pb2 {
+    top: 12vmin;
+    left: 12vmin;
+}
+
+.chart .statistics .data .points .point.pb3 {
+    top: 15.5vmin; 
+    left: 22vmin;
+}
+
+.chart .statistics .data .points .point.pb4 {
+    top: 13.3vmin;
+    left: 32vmin;
+}
+
+.chart .statistics .data .points .point.pb5 {
+    top: 14.5vmin;
+    left: 42vmin;
+}
+
+.chart .statistics .data .points .point.pb6 {
+    top: 17.8vmin;
+    left: 52.4vmin;
+}
+
+.chart .statistics .data .points .point.pb7 {
+    top: 15.3vmin;
+    left: 62vmin;
+}
+
+.chart .days {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.chart .day {
+    display: block;
+    float: left;
+    width: 14.2857142857%;
+    color: #949494;
+    line-height: 8vmin;
+    font-size: 2.5vmin;
+    text-align: center;
+    text-transform: uppercase;
+}
